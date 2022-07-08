@@ -1,0 +1,10 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  .MuiInputBase-root {
+   padding-bottom: 10px;
+  }
+  .MuiSvgIcon-root{
+    padding-bottom: 5px;
+  }

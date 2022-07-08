@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+            <style>
+                .tableDiv {
+                    margin: 0px 20px 0px 20px;
+                }
+
+                table {
+                    font-family: arial, sans-serif;
+                    border-collapse: collapse;
+                    width: 100%;
+                }
+
+                td,
+                th {
+                    border: 1px solid #dddddd;
+                    text-align: left;
+                    padding: 20px;
+                }
+
+                tr:nth-child(even) {
+                    background-color: #dddddd;
+                }
+
+                thead{
+                    background-color: rgb(211, 211, 211);
+                }
+
+                .companyLogo {
+                    width: auto;
+                }
+
+                .logoContainer {
+                    text-align: center;
+                    width: 100%;
+                }
+            </style>
+        </head>
+
+        <body>
+            <!-- <div class="container"> -->
+            <section id="makepdf" class="sectionContainer ">
+
+                <div class="tableDiv">
+                    <div class="logoContainer">
+                        <img src="https://vincitorerealty.com/wp-content/uploads/2019/07/logo.png" style="height: 108px;" class="companyLogo" alt="company-logo" />
+                    </div>
+                    <h3 class="text-uppercase" style="text-align: center">Sales Offer</h3>
+                    <div class="textHeading" style="margin-bottom:17px;font-size:18px;">
+                        <p>Dear Customer,</p>
+                        <p class="mt-1">Thank you for your interest in our Project. Please find the property details below.
+                        </p>
+                    </div>
+                    <table class="table table-bordered" style="margin:2px">
+                        <thead>
+                            <tr>
+                                <th scope=" col" class="text-center text-capitalize">
+                                    Project
+                                </th>
+                                <th scope="col" class="text-center text-capitalize">
+                                    Total Area(Sqft)
+                                </th>
+                                <th scope="col" class="text-center text-capitalize">
+                                    Actual Price(AED)
+                                </th>
+                                <th scope="col" class="text-center text-capitalize">
+                                    Discount Applied(%)
+                                </th>
+                                <th scope="col" class="text-center text-capitalize">
+                                    Selling Price(AED)
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">${response[0].mx_Project_Name}</td>
+                                <td class="text-center">${response[0].mx_Total_Area}</td>
+                                <td class="text-center">AED ${response[0].mx_Unit_Price}</td>
+                                <td class="text-center">0</td>
+                                <td class="text-center">AED ${response[0].mx_Unit_Price}</td>
+                            </tr>
+                        </tbody>
+                        <thead>
+                            <tr>
+                                <th scope=" col" class="text-center text-capitalize">
+                                    Category
+                                </th>
+                                <th scope="col" class="text-center text-capitalize">
+                                    Unit Number
+                                </th>
+                                <th scope="col" class="text-center text-capitalize">
+                                    Payment Plan Type
+                                </th>
+                                <th scope="col" class="text-center text-capitalize">
+                                    View
+                                </th>
+                                <th scope="col" class="text-center text-capitalize">
+                                    Bedrooms
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="detail">
+                            <tr>
+                                <td class="text-center">${response[0].mx_Property_Type}</td>
+                                <td class="text-center">${response[0].mx_Unit_No}</td>
+                                <td class="text-center text-uppercase">RG</td>
+                                <td class="text-center">${response[0].mx_View}</td>
+                                <td class="text-center">${response[0].mx_TYPE}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <ul class="extraCharges">
+                    <li>
+                        Applicable fees payable to Dubai Land Department is 4% of the net property price + AED 3600 Oqood
+                        registration charges and admin
+                        fees.
+                    </li>
+                    <li>Price and availability are subject to change without notice.</li>
+                    <li>Indicative only and subject to applicable currency exchange rates.</li>
+                </ul>
+            </section>
+            <!-- </div> -->
+        </body>
+
+        </html>
